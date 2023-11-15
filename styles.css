@@ -6,13 +6,16 @@
 }
 
 :root {
-  --color-primary-lighter: #E7E2E8;
-  --color-primary-light: #C498CD;
-  --color-primary-base: #AD00CF;
-  --color-primary-dark: #690081;
-  --color-primary-darker: #3A0042;
+  --colors-primary-lighter: #D3C0D7;
+  --colors-primary-light: #C498CD;
+  --colors-primary-base: #AD00CF;
+  --colors-primary-dark: #690081;
+  --colors-primary-darker: #020003;
+
+
 
   --nav-height: 10vh;
+  --nav-text-color: #FFFFFF;
 }
 
 body {
@@ -21,11 +24,16 @@ body {
   margin-top: var(--nav-height);
 }
 
+h1 {
+  font-size: unset;
+}
+
 nav {
   width: 100%;
   height: var(--nav-height);
-  background-color: var(--color-primary-base);
+  background-color: var(--colors-primary-base);
   padding: 0 10%;
+  color: var(--nav-text-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,10 +49,56 @@ nav ul {
   gap: 3rem;
 }
 
+nav ul li {
+  cursor: pointer;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: .2s;
+}
+
+nav ul li:hover {
+  border-color: var(--nav-text-color);
+}
+
+button.default {
+  width: max-content;
+  background-color: var(--colors-primary-base);
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: var(--colors-primary-dark) 1.95px 1.95px 2.6px;
+  transition: .3s;
+}
+
+button.default:hover {
+  background-color: var(--colors-primary-dark);
+}
+
 section {
-  background-color: red;
+  width: 100%;
 }
 
 section#banner {
-  
+  padding: 2rem 10rem;
+  background-color: var(--colors-primary-lighter);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div#banner-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--colors-primary-darker);
+}
+
+div#banner-right {
+  width: 25rem;
 }
