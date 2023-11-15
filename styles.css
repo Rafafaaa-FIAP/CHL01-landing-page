@@ -5,23 +5,11 @@
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
-:root {
-  --colors-primary-lighter: #D3C0D7;
-  --colors-primary-light: #C498CD;
-  --colors-primary-base: #AD00CF;
-  --colors-primary-dark: #690081;
-  --colors-primary-darker: #020003;
-
-
-
-  --nav-height: 10vh;
-  --nav-text-color: #FFFFFF;
-}
-
 body {
   width: 100%;
   height: calc(100vh - var(--nav-height));
   margin-top: var(--nav-height);
+  background-color: var(--colors-background-1);
 }
 
 h1 {
@@ -33,7 +21,7 @@ nav {
   height: var(--nav-height);
   background-color: var(--colors-primary-base);
   padding: 0 10%;
-  color: var(--nav-text-color);
+  color: var(--colors-text-on-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,7 +34,7 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: space-evenly;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 nav ul li {
@@ -57,7 +45,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-  border-color: var(--nav-text-color);
+  border-color: var(--colors-text-on-color);
 }
 
 button.default {
@@ -68,7 +56,7 @@ button.default {
   border-radius: 5px;
   font-size: 1rem;
   font-weight: 500;
-  color: #FFFFFF;
+  color: var(--colors-text-on-color);
   cursor: pointer;
   box-shadow: var(--colors-primary-dark) 1.95px 1.95px 2.6px;
   transition: .3s;
@@ -84,7 +72,7 @@ section {
 
 section#banner {
   padding: 2rem 10rem;
-  background-color: var(--colors-primary-lighter);
+  background-color: var(--colors-background-2);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -96,7 +84,7 @@ div#banner-left {
   gap: 1em;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--colors-primary-darker);
+  color: var(--colors-text-primary);
 }
 
 div#banner-right {

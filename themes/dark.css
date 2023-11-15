@@ -1,0 +1,18 @@
+:root {
+  --colors-primary-lighter: #D3C0D7;
+  --colors-primary-light: #C498CD;
+  --colors-primary-base: #AD00CF;
+  --colors-primary-dark: #690081;
+  --colors-primary-darker: #020003;
+
+  --colors-semantic-error-base: #EB2525;
+
+  --colors-background-1: #1A1A1A;
+  --colors-background-2: var(--colors-primary-darker);
+
+  --colors-text-primary: #FFFFFF;
+  --colors-text-secondary: #808080;
+  --colors-text-on-color: #262626;
+
+  --nav-height: 10vh;
+}
