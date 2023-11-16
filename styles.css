@@ -90,3 +90,41 @@ div#banner-left {
 div#banner-right {
   width: 25rem;
 }
+
+section#data{
+  padding:2rem 10rem;
+}
+
+div#data-fonts{
+  padding-top:2rem;
+}
+
+div#mentions{
+display: flex;
+gap: 7rem;
+padding-top: 3rem;
+justify-content: space-around;
+}
+
+.mentions{
+  font-weight: 600;
+  color: ;
+  width: 20rem;
+  text-align: center;
+  padding: 2rem 2rem;
+  background-color: var(--colors-background-2);
+  border-radius: 7px;
+  transform: scale(1);
+}
+
+div#data-fonts h2{
+width: 45rem;
+}
+
+section#data h1{
+  font-size: 2rem;
+}
+
+section#data button{
+  margin: 2rem;
+}
