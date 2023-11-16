@@ -28,6 +28,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 nav ul {
@@ -108,7 +109,6 @@ justify-content: space-around;
 
 .mentions{
   font-weight: 600;
-  color: ;
   width: 20rem;
   text-align: center;
   padding: 2rem 2rem;
