@@ -287,3 +287,46 @@ form#send-me-form {
 .teste {
   background-color: red;
 }
+
+section#area_kids {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+img#children {
+  
+  width:40rem;
+  height:40rem;
+  
+}
+
+ul#list_benefits {
+  border-radius: 5px;
+  padding: 0.5em 1em 0.5em 2.3em;
+  position: relative;
+  list-style-image: url(./images/transferir.png);
+  background-color: var(--colors-background-2);
+  
+}
+
+ul#list_benefits li {
+  line-height: 1.5;
+  padding: 0.5em 0;
+  
+}
+
+#area_kids h2{
+  font-size: 2rem;
+
+}
+
+#benefits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  
+}
