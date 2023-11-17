@@ -90,3 +90,33 @@ function scrollDown (section){
     });
 }
 }
+
+
+
+
+//Aciona o dropdown
+
+const cards = document.querySelectorAll(".problem-card")
+
+
+
+
+cards.forEach((item)=>{
+  item.addEventListener("click", ()=>{
+    const card = item
+    const pAtual = card.querySelector("p")
+    
+  
+    pAtual.classList.remove("display-block")
+   
+
+    
+    item.classList.toggle("active")
+
+    if(item.classList.contains("active")){
+    
+    pAtual.classList.add("display-block")
+    console.log(pAtual)
+  }
+  })
+})

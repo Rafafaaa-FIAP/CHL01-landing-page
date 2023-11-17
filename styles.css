@@ -331,3 +331,211 @@ ul#list_benefits li {
   gap: 3rem;
   
 }
+
+
+
+
+/* Section problems */
+section.problems{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--colors-background-1);
+
+
+  padding: 2rem 10rem 4rem;
+
+  gap: 2rem;
+
+
+}
+
+section.problems h2{
+ font-size: 1.8rem;
+
+
+}
+
+
+section.problems div.problem-cards{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem;
+  gap: 3rem;
+  
+  
+}
+
+section.problems div.problem-card{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border: 1px solid var(--colors-primary-dark);
+  border-radius: .3rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  background-color: var(--colors-background-2);
+  cursor: pointer;
+  animation: reverseDropDownCard 0.25s forwards ;
+  position: relative;
+  transition: 0.5s ease-in;
+  color: black;
+ 
+
+  
+}
+
+div.problem-card:hover{
+  border: 1px solid var(--colors-primary-base);
+  opacity: 0.8;
+}
+
+div.problem-card:hover h3{
+ 
+  color: var(--colors-primary-base);
+}
+
+section.problems div.problem-card.active{
+  animation: dropdownCard 0.25s forwards;
+  align-items: flex-start;
+  justify-content: center;
+  height: fit-content;
+
+ 
+  
+ 
+}
+
+
+section.problems div.problem-card.active div.problem-description{
+  
+  padding: 4rem 2.5rem;
+ 
+  
+ 
+}
+
+
+
+.problem-card span.icon-dropdown{
+  margin: 1.8rem 0 0;
+  position: absolute;
+  top: 0;
+  right: 40px;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  height: 30px;
+
+  border: 1px solid var(--colors-primary-dark);
+  width: 30px;
+  border-radius: 50%;
+}
+
+span.icon-dropdown::before{
+  background: var(--colors-primary-base);
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transition: transform .5s ease-in-out;
+    width: 80%;
+    transform: rotate(90deg);
+   
+
+}
+span.icon-dropdown::after{
+  background: var(--colors-primary-base);
+    content: "";
+    display: block;
+    height: 0.12rem;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transition: transform .25s ease-out;
+    width: 80%;
+}
+
+
+
+div.problem-card.active span.icon-dropdown::before{
+  transform: rotate(0deg);
+}
+
+    
+    
+    
+    
+
+
+
+
+.problem-card h3{
+  margin: 2rem 0 0;
+  position: absolute;
+  top: 0;
+  left: 40px;
+}
+
+.problem-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+ 
+}
+
+.problem-description p{
+  width: 100%;
+  display: none;
+
+
+  
+}
+
+.problem-description button{
+  display: none;
+  width: 50%;
+}
+
+
+
+
+.display-block{
+  display: block !important;
+}
+
+
+
+
+
+
+
+@keyframes dropdownCard{
+  from{
+    height: 5.9rem;
+  }
+
+  to{
+    height: 13rem
+    
+  }
+  
+}
+
+@keyframes reverseDropDownCard {
+  from {
+    height: 13rem;
+  }
+
+  to {
+    height: 5.9rem;
+  }
+}
