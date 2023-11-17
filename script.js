@@ -21,3 +21,21 @@ function changeTheme() {
 
   document.querySelector('head').appendChild(link);
 }
+
+function sendMe() {
+  let error = false;
+
+  const email = document.querySelector('#email');
+  if (!email.checkValidity()) {
+    email.classList.add('invalid');
+    error = true;
+  }
+  else {
+    email.classList.remove('invalid');
+  }
+
+  if (!error) {
+    alert('Você será avisado!');
+    email.value = '';
+  }
+}
