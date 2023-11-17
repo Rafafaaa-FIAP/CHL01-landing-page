@@ -10,10 +10,19 @@ body {
   height: calc(100vh - var(--nav-height));
   margin-top: var(--nav-height);
   background-color: var(--colors-background-1);
+  color: var(--colors-text-primary);
 }
 
 h1 {
   font-size: unset;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+h3{
+  font-size: 1.5rem;
 }
 
 nav {
@@ -96,35 +105,59 @@ section#data{
   padding:2rem 10rem;
 }
 
+section#data h2{
+  text-align: left;
+  width: 100%;
+}
+
 div#data-fonts{
   padding-top:2rem;
 }
 
 div#mentions{
 display: flex;
-gap: 7rem;
+gap: 3rem;
 padding-top: 3rem;
 justify-content: space-around;
 }
 
 .mentions{
-  font-weight: 600;
+  font-weight: 500;
   width: 20rem;
   text-align: center;
   padding: 2rem 2rem;
   background-color: var(--colors-background-2);
   border-radius: 7px;
-  transform: scale(1);
+  display: flex;
+  align-items: center;
+  transition-property: background-color transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
 }
 
-div#data-fonts h2{
-width: 45rem;
+.mentions:hover{
+  background-color:var(--colors-primary-light);
+  transform:scale(1.08);
+}
+
+div#data-fonts h3{
+width: 40rem;
+font-weight: 600;
 }
 
 section#data h1{
   font-size: 2rem;
 }
 
-section#data button{
+
+div#read-me-btn{
   margin: 2rem;
+  display: flex;
+  justify-content: center;
+
 }
+
+p#autor{
+  padding-top:1rem;
+}
+
