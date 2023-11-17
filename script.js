@@ -80,3 +80,13 @@ document.addEventListener("DOMContentLoaded", function () {
       requestAnimationFrame(animateScroll);
   }
 });
+
+function scrollDown (section){
+  const sectionId = document.getElementById(section);
+  if(sectionId){
+    window.scrollTo({
+      top:(sectionId.offsetTop-100),
+      behavior:'smooth'
+    });
+}
+}
