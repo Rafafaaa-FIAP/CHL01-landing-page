@@ -336,7 +336,7 @@ ul#list_benefits li {
 
 
 /* Section problems */
-section.problems{
+section#problems{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -350,14 +350,82 @@ section.problems{
 
 }
 
-section.problems h2{
- font-size: 1.8rem;
+/* Card container styles */
+/* Card container styles */
+/* Card container styles */
+#functionalities {
+  text-align: center;
+  padding: 20px 0;
+}
 
+.func-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 20px auto;
+  max-width: 800px;
+}
 
+/* Card styles */
+.func-card {
+  width: calc(50% - 15px);
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #AD00CF;
+  color: #e1d7d7;
+}
+/* Existing styles */
+.func-card .background-icon {
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  /* background-color: rgb(231, 225, 224); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px;
+  overflow: hidden;
+}
+
+/* New styles to set entire func-card background to white for even children */
+.func-cards > div:nth-child(2),
+.func-cards > div:nth-child(3)  {
+  background-color: rgb(197, 181, 181); /* Set background color for even children */
+  color: black;
 }
 
 
-section.problems div.problem-cards{
+.func-card .background-icon img {
+  width: 90%; /* Adjust the icon size */
+  height: auto; /* Maintain the aspect ratio */
+  object-fit: contain; /* Ensure the entire image fits within the div */
+  box-sizing: border-box;
+}
+
+
+
+
+.func-card h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.func-card p {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+
+
+section#problems div.problem-cards{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -368,7 +436,7 @@ section.problems div.problem-cards{
   
 }
 
-section.problems div.problem-card{
+section#problems div.problem-card{
   
   display: flex;
   flex-direction: column;
@@ -398,7 +466,7 @@ div.problem-card:hover h3{
   color: var(--colors-primary-base);
 }
 
-section.problems div.problem-card.active{
+section#problems div.problem-card.active{
   animation: dropdownCard 0.25s forwards;
   align-items: flex-start;
   justify-content: center;
