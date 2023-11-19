@@ -1,25 +1,34 @@
-let theme = 'dark'
-
-changeTheme();
+const themeSwitch = document.querySelector('#theme-switch');
+themeSwitch.addEventListener('change', changeTheme);
 
 function changeTheme() {
   const currentTheme = document.querySelector('link[theme]');
-  if (currentTheme) {
-    currentTheme.remove();
-  }
 
-  if (theme === 'light') {
+  let theme;
+  if (currentTheme.getAttribute('theme') === 'light') {
     theme = 'dark';
   }
   else {
     theme = 'light';
   }
 
-  let link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = `./themes/${theme}.css`
+  currentTheme.href = `./themes/${theme}.css`;
+  currentTheme.setAttribute('theme', theme);
+}
 
-  document.querySelector('head').appendChild(link);
+function scrollScreen(sectionId) {
+  sectionId = (sectionId.includes('#') ? '' : '#') + sectionId;
+
+  const section = document.querySelector(sectionId);
+  console.log(section);
+  if (section) {
+    const navHeight = document.querySelector('nav').clientHeight;
+
+    document.querySelector('main').scrollTo({
+      top: section.offsetTop - navHeight,
+      behavior: 'smooth'
+    });
+  }
 }
 
 function sendMe() {
@@ -40,83 +49,14 @@ function sendMe() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Obtém o botão de rolagem para o topo
-  var scrollTopButton = document.getElementById("scrollTopBtn");
-
-  // Adiciona um evento de rolagem à janela
-  window.onscroll = function () {
-  
-  };
-
-  // Adiciona um evento de clique ao botão
-  scrollTopButton.addEventListener("click", function () {
-      // Rola suavemente para o topo
-      scrollToTop(500); // 1000 representa a velocidade da animação em milissegundos
-  });
-
-  // Função para rolar suavemente para o topo
-  function scrollToTop(duration) {
-      var start = window.scrollY,
-          startTime = performance.now();
-
-      function animateScroll() {
-          var now = performance.now(),
-              time = now - startTime,
-              percent = Math.min(time / duration, 1);
-
-          window.scrollTo(0, easeInOutCubic(start, 0, percent));
-
-          if (time < duration) {
-              requestAnimationFrame(animateScroll);
-          }
-      }
-
-      // Função de interpolação para suavizar a animação
-      function easeInOutCubic(start, end, percent) {
-          return start + (3 * percent * percent - 2 * percent * percent * percent) * (end - start);
-      }
-
-      requestAnimationFrame(animateScroll);
-  }
-});
-
-function scrollDown (section){
-  const sectionId = document.getElementById(section);
-  if(sectionId){
-    window.scrollTo({
-      top:(sectionId.offsetTop-100),
-      behavior:'smooth'
-    });
-}
-}
-
-
 
 
 //Aciona o dropdown
 
-const cards = document.querySelectorAll(".problem-card")
+const cards = document.querySelectorAll('.card');
 
-
-
-
-cards.forEach((item)=>{
-  item.addEventListener("click", ()=>{
-    const card = item
-    const pAtual = card.querySelector("p")
-    
-  
-    pAtual.classList.remove("display-block")
-   
-
-    
-    item.classList.toggle("active")
-
-    if(item.classList.contains("active")){
-    
-    pAtual.classList.add("display-block")
-    console.log(pAtual)
-  }
+cards.forEach((card)=>{
+  card.addEventListener('click', () => {
+    card.classList.toggle('active');
   })
 })
