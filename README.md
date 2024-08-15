@@ -1,4 +1,4 @@
-# Landing Page
+# Challenge 01 - Landing Page
 
 Realizado com o objetivo de avaliar o conhecimento sobre Front-End.
 
